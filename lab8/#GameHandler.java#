@@ -1,0 +1,23 @@
+
+import java.awt.event.*;
+
+public class GameHandler implements ActionListener {
+
+	
+	private TheGame g;
+	private Lab8Frame frame;
+	
+	public GameHandler(TheGame game1, Lab8Frame fr) {
+		g = game1;
+		frame = fr;
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		g.spot();
+		if (g.getDoneMessage() != null)
+			frame.setDoneMessage(g.getDoneMessage());
+		// ask for the Lab8Frame to be repainted
+		frame.repaint();
+	}
+
+}

@@ -1,0 +1,53 @@
+import java.util.Vector;
+
+public  abstract class ConsGame{
+    /* SudokuGame game;
+    Vector<Spot> unsetSpots;
+    int[] possibleValues;
+   
+    int i=0;
+
+    public Solver(SudokuGame G, Vector<Spot> u,int[] pv){
+
+	  unsetSpots=u;
+	  game=G;
+	  possibleValues=pv;}*/
+
+
+    public boolean solving(int i,ConsGame game, Vector<Spot> unsetSpots,int[] possibleValues){
+	//	System.out.println(i);
+	int[] y=new int[2];
+	if (i==unsetSpots.size()){
+	   
+	    return game.Check();}
+	
+	for(int j=0; j<possibleValues.length;j++){
+	    //  System.out.println("for");
+	    Spot x=unsetSpots.elementAt(i);
+	     y=x.getArray();
+	    game.add(y[0],y[1],possibleValues[j]);
+	    boolean check=game.Check();
+	    if (check){
+		//	System.out.println("check");
+		if (solving(i+1,game,unsetSpots,possibleValues)){
+			return true;
+		    }
+	    }}
+	game.add(y[0],y[1],0);
+	return false;}
+
+
+
+ public void add(int i,int j,int k){
+     //  System.out.println(" null");
+}
+
+
+  public boolean Check(){
+      return false;
+		}
+    public void writeBoard(){}
+    
+    public boolean zeroCounter(){
+	return false;}
+}	

@@ -1,0 +1,38 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+
+
+public class NumberChangeListener implements ActionListener {
+
+	private JFrame frame;
+    //  private int j;
+    // private int i;
+    private JButton b;
+    public NumberChangeListener(JButton clicker,GamePick p) {
+		frame = p;
+		this.b=clicker;
+	}
+
+	
+	public void actionPerformed(ActionEvent e) {
+		String action = e.getActionCommand();
+		if (action.equals("Sudoku")){
+		    p.dispose();
+		    SudokuFrame yes=new SudokuFrame();
+		}
+		if (action.equals("KenKen")){
+		    p.dispose();
+		    KenKenFrame yes=new KenKenFrame();
+		}
+		if(action.equals("SixPack")){
+		    p.dispose();
+		    SixPackFrame yes=new SixPackFrame();
+			}
+	
+	
+	
+		
+	}
+		
+}

@@ -1,0 +1,26 @@
+import java.awt.event.*;
+
+public class Go implements ActionListener {
+
+	
+    JRadioButton r,n,k;
+	
+    public Go(JRadioButton r, JRadioButton n, JRadioButton k) {
+		g = game1;
+		frame = fr;
+	}
+
+    public void actionPerformed(ActionEvent e) {
+	// g.add(i,j,e);
+	    g.writeBoard();
+	    g.Check();
+	    // if (g.win()!=true)
+	    if(g.getWin()==true){
+		frame.setMessage("you Win");}
+	    else{
+		frame.setMessage("you haven't won");}
+		// ask for the Lab8Frame to be repainted
+		frame.repaint();
+	}
+
+}

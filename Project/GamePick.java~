@@ -1,0 +1,14 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class GamePick extends JFrame{
+    public GamePick(){
+	// JFrame me=new JFrame();
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      	Container ct = getContentPane();
+	 
+	 ct.setLayout(new FlowLayout());
+	 JButton chose=new JButton("Chose Game");
+	 GamePButtonToMenuList btml=new ButtonToMenuList(this,chose);
+	 ct.add(chose);
+	 this.setVisible(true);}}

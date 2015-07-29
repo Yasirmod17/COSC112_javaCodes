@@ -1,0 +1,50 @@
+
+public class Tree {
+
+    // this is a tree header
+    // if root == null, the tree is empty
+
+    private TreeNode root;
+
+    public void add(int p) {
+
+	if (root == null) {
+	    root = new TreeNode(p);
+	    root.setParent(null);
+	}
+	else root.add(p);
+    }
+
+    public boolean find(int p) {
+	if (root == null)
+	    return false;
+	else {
+	    return root.find(p);
+	}
+    }
+
+    public void traverse() {
+	if (root == null)
+	    System.out.println("empty tree");
+	else {
+	    System.out.println("Printing tree:");
+	    root.inOrdertraversal("");
+	}	
+    }
+
+    public int depth() {
+	return root.depth();
+    }
+
+    public void listAll() {
+	if (root == null)
+	    return;
+	TreeNode moving = root.smallest();
+	while (moving != null) {
+	    System.out.println(moving);
+	    moving = moving.findNext();
+	}
+    }
+
+}
+

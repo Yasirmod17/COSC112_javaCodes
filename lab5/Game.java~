@@ -1,0 +1,74 @@
+
+public class Game {
+
+
+    private int guests;
+    private int skipping;
+    private CS112Queue GameQueue;
+    private int Counter;
+   
+	public Game(int g, int s) {
+	    guests = g;
+	    skipping = s;
+	     GameQueue=new CS112Queue(guests);
+	    
+	    for (int i=0;i<guests;i++){
+		 GameQueue.add(i+1);
+	  
+	     }
+	    //    GameQueue.writeQueue(); 
+	    
+	}
+  
+       
+   
+
+    	public int playGame() {
+      
+	    for(int i=0;GameQueue.getCount()>=skipping;i++){
+		    if (i%skipping==0){
+			System.out.println(GameQueue.remove()+ " is Sauced");
+		      
+		    }
+		    else{
+			GameQueue.add(GameQueue.remove());
+		    }}
+	    // GameQueue.add(77);
+	     int[] left=GameQueue.getQueue();
+	     for(int j=0; j<left.length;j++){
+		 if (left[j]!=0){
+		     return left[j];
+		     // System.out.println(left[j]+"gets the gold");
+		 }}
+	      return 0;
+
+
+
+}
+
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+    //	    if (checker()==true){
+    //		for (int i=0;i<theQ.length;i++){
+    //		    if (theQ[i]!=0){
+    //			return theQ[i];}}}
+    //	    else{
+    //		while (checker()!=true){
+    //		    int skipper=2;
+		    // for(int i=front 
+    //	}
+	
+	
+	
+		    }

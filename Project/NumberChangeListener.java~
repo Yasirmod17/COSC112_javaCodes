@@ -1,0 +1,42 @@
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+
+public class NumberChangeListener implements ActionListener {
+
+	private SudokuGame game;
+    private int j;
+    private int i;
+	
+    public NumberChangeListener(SudokuGame fr,int i,int j) {
+		game = fr;
+		this.j=j;
+		this.i=i;
+	}
+
+	
+	public void actionPerformed(ActionEvent e) {
+		String action = e.getActionCommand();
+		if (action.equals("1")){
+		    game.add(this.i,this.j,1);}
+		if (action.equals("2")){
+		    game.add(this.i,this.j,2);}
+		if(action.equals("3")){
+		    game.add(this.i,this.j,3);}
+		if (action.equals("4")){
+		    game.add(this.i,this.j,4);}
+		if (action.equals("5")){
+		    game.add(this.i,this.j,5);}
+		if(action.equals("6")){
+		    game.add(this.i,this.j,6);}
+		if (action.equals("7")){
+		    game.add(this.i,this.j,7);}
+		if (action.equals("8")){
+		    game.add(this.i,this.j,8);}
+		if (action.equals("9")){
+		    game.add(this.i,this.j,9);}
+		
+	}
+		
+}

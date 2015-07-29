@@ -1,0 +1,17 @@
+public class UseDate {
+
+	public static void main(String[] args) {
+
+	    CS112DateObject day1 = new CS112DateObject("December",30, 1600,"gregorian");
+		
+		System.out.println("Your date is: "+day1);
+		System.out.println("The leap year test returns: "+ day1.leapYear());
+		System.out.println("The number of days in the month are: "+ day1.daysInMonth());
+		System.out.println("12 Days after your day is: "+day1.makeTomorrow(12));
+		System.out.println("A copy of your date is: "+day1.generateCopy());
+		System.out.println("The test of both objects returns: "+day1.SameDate(day1.generateCopy()));
+      		System.out.println("The nextday of the copy is: " + day1.generateTomorrow());
+	}
+
+
+}

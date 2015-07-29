@@ -1,0 +1,7 @@
+import java.awt.*;
+
+import javax.swing.JPanel;
+public class SPackPanel extends JPanel {
+    	public SPackPanelPanel() {
+		setPreferredSize(new Dimension(100,500));
+	}}

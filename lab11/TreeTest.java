@@ -1,0 +1,41 @@
+
+public class TreeTest {
+
+	public static void main(String[] args) {
+
+		new TreeTest().process();
+	}
+
+	public void process() {
+		Tree sampleTree = new Tree();
+				
+		sampleTree.add(8);
+		
+		sampleTree.add(4);
+		sampleTree.add(2);
+		sampleTree.add(3);
+		sampleTree.add(12);
+		sampleTree.add(7);
+		sampleTree.add(1);
+		sampleTree.add(5);
+		sampleTree.add(6);
+		
+		
+
+		System.out.println("Does tree contain  5? "+sampleTree.find(5));
+		System.out.println("Does tree contain  7? "+sampleTree.find(7));
+		System.out.println("Does tree contain  6? "+sampleTree.find(6));
+		System.out.println("Does tree contain 26? "+sampleTree.find(26));
+		
+		sampleTree.traverse();
+	
+		System.out.println("Depth "+sampleTree.depth());
+		System.out.println(sampleTree.findNext());
+	
+		System.out.println("Printing tree (a different way");
+		//	System.out.println(sampleTree.findNext());
+		sampleTree.listAll();
+
+	}
+	
+}
